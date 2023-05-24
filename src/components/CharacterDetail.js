@@ -2,7 +2,8 @@ import React from 'react';
 import './CharacterDetail.css';
 import EpisodeList from './EpisodeList';
 
-const CharacterDetail = ({ character }) => {
+
+const CharacterDetail = ({character, episodes}) => { 
   return (
     <div id="characterDetail">
       <div id="detailWrapper">
@@ -26,10 +27,9 @@ const CharacterDetail = ({ character }) => {
       </div>
 
       <div id="episode-list-wrapper">
-        <h3>Episodes:</h3>
-        <EpisodeList episodes={character.episode} />
-      </div>
+      <EpisodeList episodes={episodes} /> //ADDED
     </div>
+  </div>
   );
 };
 
